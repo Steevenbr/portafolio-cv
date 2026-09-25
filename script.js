@@ -1,3 +1,19 @@
+// 0. Lógica del menú hamburguesa para móviles
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+
+// Abrir/Cerrar el menú al tocar el botón
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('activo');
+});
+
+// Cerrar el menú automáticamente al hacer clic en cualquier enlace
+document.querySelectorAll('#nav-links a').forEach(enlace => {
+    enlace.addEventListener('click', () => {
+        navLinks.classList.remove('activo');
+    });
+});
+
 // 1. Desplazamiento suave para los enlaces del menú
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

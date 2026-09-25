@@ -16,34 +16,66 @@
     scroll-behavior: smooth;
 }
 
-html, body {
+body {
     overflow-x: hidden; /* Esto evita que el celular se mueva hacia los lados por error y bloquee la animación */
 }
 
-body {
-    /* Fondo premium con un brillo sutil */
-    background: radial-gradient(circle at 10% 10%, #1e293b 0%, #0b1120 100%);
-    background-attachment: fixed;
-    color: var(--text-main);
-    line-height: 1.7;
-}
-
+/* --- HACER EL MENÚ ESTÁTICO (STICKY) --- */
 header {
-    background: rgba(11, 17, 32, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 1.2rem 5%;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid var(--border-color);
-    z-index: 100;
+    z-index: 1000;
+    background: rgba(11, 17, 32, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 0.5rem 2%; /* Añadimos un pequeño respiro lateral */
+}
+
+/* Ocultar el botón hamburguesa en computadora */
+.menu-toggle {
+    display: none; 
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+/* --- ADAPTACIÓN PARA CELULARES --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostramos el botón hamburguesa */
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: -100%; /* Oculto fuera de la pantalla inicialmente */
+        width: 100%;
+        background: rgba(11, 17, 32, 0.98);
+        text-align: center;
+        transition: left 0.3s ease; /* Animación de deslizamiento */
+        padding: 2rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul.activo {
+        left: 0; /* Desliza el menú hacia adentro cuando está activo */
+    }
+    
+    nav ul li {
+        margin: 1.5rem 0;
+    }
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1350px; /* Lo ampliamos de 1200px a 1350px para que se extienda más */
     margin: 0 auto;
+    padding: 1rem 2rem; /* Aumentamos el espacio interno (padding) para que se vea más ancho y cómodo */
 }
 
 .logo {
@@ -303,7 +335,7 @@ main {
 
 .lista-contacto {
     list-style: none;
-    margin-top: 0; /* Cambiamos esto a 0 para quitar el espacio extra */
+    margin-top: 0; 
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -345,9 +377,6 @@ main {
     .hero {
         flex-direction: column;
         text-align: center;
-    }
-    nav ul {
-        display: none;
     }
     .botones-contacto {
         justify-content: center;

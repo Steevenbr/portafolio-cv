@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steeven Flores | Software Engineer</title>
+    <!-- Favicon: Ícono de software / código -->
+    <link rel="icon" href="https://api.iconify.design/lucide:code.svg" type="image/svg+xml">
     <!-- Íconos profesionales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -13,7 +15,12 @@
     <header>
         <nav>
             <h1 class="logo">&lt;Steeven.Dev /&gt;</h1>
-            <ul>
+            <!-- Botón de menú para celulares -->
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <!-- Lista de enlaces -->
+            <ul id="nav-links">
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#metodologia">Metodología</a></li>
                 <li><a href="#habilidades">Skills</a></li>
@@ -113,7 +120,7 @@
         </section>
 
         <!-- SECCIÓN DE PROYECTOS DESTACADOS -->
-        <sectgion id="proyectos">
+        <section id="proyectos">
             <h2 class="titulo-seccion">Proyectos Destacados</h2>
             <div class="grid-proyectos">
                 
