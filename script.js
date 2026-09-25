@@ -8,28 +8,31 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80, // Ajuste modificado para la barra superior
+                top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
         }
     });
 });
 
-// 2. Animación de aparición al hacer Scroll (Intersection Observer)
-const observer = new IntersectionObserver((entries) => {
+// 2. Animación de aparición al hacer Scroll (Intersection Observer optimizado)
+const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('seccion-visible');
+            // Esto le dice al celular que deje de vigilar el elemento una vez que ya apareció
+            observer.unobserve(entry.target); 
         }
     });
 }, {
-    threshold: 0.15 // Se activa cuando el 15% del elemento es visible en pantalla
+    threshold: 0.02, // Reacciona rapidísimo en celular
+    rootMargin: "0px 0px -30px 0px"
 });
 
 // Seleccionamos todo lo que queremos animar
 const elementosAAnimar = document.querySelectorAll('section, .tarjeta-metodologia, .proyecto, .skill-card');
 
-// A todos los elementos seleccionados les agregamos la clase oculta y los observamos
+// A todos les agregamos la clase oculta inicialmente y los observamos
 elementosAAnimar.forEach((el) => {
     el.classList.add('seccion-oculta');
     observer.observe(el);

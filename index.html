@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steeven Bryan Flores Vega | Software Engineer</title>
+    <title>Steeven Flores | Software Engineer</title>
     <!-- Íconos profesionales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -27,12 +27,13 @@
         <!-- SECCIÓN SOBRE MÍ -->
         <section id="sobre-mi" class="hero">
             <div class="hero-imagen-container">
-                <img src="assets/perfil.jpg" alt="Steeven Flores" class="foto-perfil">
+                <img src="assets/perfil.jpeg" alt="Steeven Flores" class="foto-perfil">
             </div>
             <div class="info-hero">
-                <span class="badge">Ingeniero en Software</span>
+                <span class="badge">Ingeniero de Software</span>
                 <h2>Steeven Bryan Flores Vega</h2>
-                <p>Estudiante de la Universidad de las Fuerzas Armadas ESPE. Me especializo en el diseño de sistemas escalables utilizando metodologías como <strong>Clean Architecture</strong> y <strong>Domain-Driven Design (DDD)</strong>. Como siempre decimos, ¡somos los chicos de la ESPE! y me apasiona desde la optimización de flujos CI/CD y microservicios backend, hasta la creación de lógicas complejas de inteligencia artificial (FSM, Behavior Trees) para el desarrollo de videojuegos.</p>
+                <p>Soy <strong>Ingeniero de Software</strong> graduado de la Universidad de las Fuerzas Armadas ESPE, especializado en el diseño y construcción de sistemas tecnológicos robustos, escalables y orientados a la calidad. Mi filosofía de desarrollo se fundamenta en la rigurosidad analítica y la aplicación de <strong>Clean Architecture</strong> junto con <strong>Domain-Driven Design (DDD)</strong>, estructurando soluciones donde la lógica de negocio central es totalmente independiente de frameworks o infraestructuras externas.</p>
+                <p>Cuento con una visión integral del ciclo de vida del software: desde el modelado de microservicios backend y la integración de APIs corporativas para comercio electrónico, hasta la orquestación de entornos de desarrollo y la programación de lógicas de decisión avanzadas (FSM, Behavior Trees) para simuladores. Mi objetivo como profesional es transformar requerimientos complejos en arquitecturas eficientes, garantizando siempre alta cohesión, bajo acoplamiento y código preparado para evolucionar en producción.</p>
                 <div class="botones-contacto">
                     <a href="assets/Currículum_Steeven Flores.pdf" target="_blank" class="btn"><i class="fa-solid fa-file-pdf"></i> Descargar CV</a>
                     <a href="https://www.linkedin.com/in/steeven-bryan-flores-vega-037726403/" target="_blank" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
@@ -112,7 +113,7 @@
         </section>
 
         <!-- SECCIÓN DE PROYECTOS DESTACADOS -->
-        <section id="proyectos">
+        <sectgion id="proyectos">
             <h2 class="titulo-seccion">Proyectos Destacados</h2>
             <div class="grid-proyectos">
                 
@@ -122,49 +123,109 @@
                         <p>Despliegue y configuración en servidores municipales de una plataforma web para la difusión turística, rutas y emprendimientos rurales.</p>
                         <div class="tags"><span>Web</span><span>Servidores</span><span>Pelileo</span></div>
                     </div>
-                    <!-- Recuerda actualizar estos enlaces con tus repositorios reales -->
-                    <a href="https://github.com/TU-USUARIO/nombre-del-repo-1" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
+                    <a href="https://github.com/Carlita-star/pelileo-tesis.git" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
                 </article>
 
                 <article class="proyecto">
                     <div class="proyecto-contenido">
                         <h3>SmartParking</h3>
-                        <p>Aplicación móvil para la gestión de parqueaderos. Modelado detallado en UML y estructurado estrictamente bajo Clean Architecture.</p>
-                        <div class="tags"><span>Flutter</span><span>Firebase</span><span>UML</span></div>
+                        <p>App móvil con geolocalización para encontrar garajes cercanos y gestionar reservas/cancelaciones. Incluye cálculo automático de tarifas por tiempo basado en los precios del dueño. Construida bajo Clean Architecture.</p>
+                        <div class="tags"><span>Flutter</span><span>Firebase</span><span>GeoLocation</span><span>Clean Arch</span></div>
                     </div>
-                    <a href="https://github.com/TU-USUARIO/nombre-del-repo-2" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
+                    <a href="https://github.com/Steevenbr/smartparking" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
                 </article>
 
                 <article class="proyecto">
                     <div class="proyecto-contenido">
-                        <h3>Arquitectura Microservicios (AnalytiCore)</h3>
-                        <p>Diseño de arquitectura orientada a dominios (DDD) y configuración de workers en Java, apoyado en orquestación de contenedores para sistemas backend.</p>
-                        <div class="tags"><span>Spring Boot</span><span>Docker</span><span>Microservicios</span></div>
+                        <h3>AnalytiCore</h3>
+                        <p>Plataforma de análisis de sentimientos capaz de procesar textos y clasificarlos (positivo/negativo). Implementada mediante una arquitectura de microservicios, configurando workers en Java y contenedores Docker.</p>
+                        <div class="tags"><span>Java Spring Boot</span><span>Docker</span><span>Análisis de Texto</span></div>
                     </div>
-                    <a href="https://github.com/TU-USUARIO/nombre-del-repo-3" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
+                    <a href="https://github.com/Steevenbr/analyticore" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
+                </article>
+
+                <article class="proyecto">
+                    <div class="proyecto-contenido">
+                        <h3>Sistema de Autenticación Segura (MFA)</h3>
+                        <p>Desarrollo de un login robusto con múltiples capas de seguridad. Implementación de autenticación multifactor (MFA) mediante aplicación de códigos temporales y verificación vía correo electrónico para proteger el acceso a información sensible.</p>
+                        <div class="tags"><span>Ciberseguridad</span><span>MFA</span><span>Auth</span></div>
+                    </div>
+                    <a href="https://github.com/Steevenbr/ProyectoFinal_Seguridad" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
+                </article>
+
+                <article class="proyecto">
+                    <div class="proyecto-contenido">
+                        <h3>Gestión de Videoclub</h3>
+                        <p>Sistema de administración de inventario y rentas construido bajo el patrón arquitectónico MVC. Incluye panel de administración, gestión de base de datos relacional (CRUD) y control del catálogo de películas.</p>
+                        <div class="tags"><span>PHP</span><span>Laravel</span><span>MVC</span><span>MySQL</span></div>
+                    </div>
+                    <a href="https://github.com/Steevenbr/VideoClub" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
                 </article>
 
                 <article class="proyecto">
                     <div class="proyecto-contenido">
                         <h3>Survival Horror 2.5D (Elias Ward)</h3>
-                        <p>Desarrollo de mecánicas, animaciones por sprite sheets y lógicas de IA orientada a objetos para un entorno 2D.</p>
+                        <p>Desarrollo de mecánicas, animaciones por sprite sheets y lógicas de IA orientada a objetos (FSM) para un entorno 2D.</p>
                         <div class="tags"><span>Unity</span><span>C#</span><span>Game AI</span></div>
                     </div>
-                    <a href="https://github.com/TU-USUARIO/nombre-del-repo-4" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
+                    <!-- Nota: Cambié el ícono y el texto para reflejar que está en la nube -->
+                    <a href="https://drive.google.com/file/d/1nmxHlVf4t959zAqZxEA75JG7SMtMHfwc/view?usp=sharing" target="_blank" class="enlace-repo"><i class="fa-solid fa-cloud-arrow-down"></i> Ver en la Nube</a>
                 </article>
             </div>
 
             <!-- SECCIÓN DE COLABORACIONES -->
-            <h2 class="titulo-seccion subtitulo-seccion">Colaboraciones Destacadas</h2>
+            <h2 class="titulo-seccion subtitulo-seccion">Colaboraciones Destacadas & Prácticas</h2>
             <div class="grid-proyectos">
+                
                 <article class="proyecto colaboracion">
                     <div class="proyecto-contenido">
-                        <h3>Módulo de Sistema de Compras</h3>
-                        <p>Participación en el desarrollo frontend y estructuración de consultas de bases de datos (JOINs, actualizaciones) para flujos de registro y compras.</p>
-                        <div class="tags"><span>Frontend</span><span>SQL Database</span></div>
+                        <h3>API E-commerce (ADS Software)</h3>
+                        <p>Desarrollo realizado durante prácticas preprofesionales. Creación e integración de una API de mensajería (WhatsApp) con plataformas de comercio electrónico, logrando sincronización de datos directa con Shopify y WooCommerce.</p>
+                        <div class="tags"><span>API REST</span><span>Shopify</span><span>WooCommerce</span><span>Prácticas</span></div>
                     </div>
-                    <a href="https://github.com/USUARIO-DEL-DUEÑO/nombre-del-repo-colaborativo" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Aporte</a>
+                    <div class="enlace-repo" style="background-color: #334155; cursor: default; color: #94a3b8;">
+                        <i class="fa-solid fa-lock"></i> Repositorio Privado
+                    </div>
                 </article>
+
+                <article class="proyecto colaboracion">
+                    <div class="proyecto-contenido">
+                        <h3>Gestión de Taller Mecánico (App)</h3>
+                        <p>Aplicación móvil con roles para dueños y clientes. Permite registrar diagnósticos con fotografías, sugerir arreglos mediante un banco de soluciones integrado y generar facturas automatizadas utilizando Firebase.</p>
+                        <div class="tags"><span>Móvil</span><span>Firebase</span><span>Roles/Auth</span><span>Facturación</span></div>
+                    </div>
+                    <a href="https://github.com/cbay-soft/tallermecanico/commits/main/?author=Steevenbr" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Aporte</a>
+                </article>
+
+                <article class="proyecto colaboracion">
+                    <div class="proyecto-contenido">
+                        <h3>Plataforma GamerFest 2025 (ESPE)</h3>
+                        <p>Plataforma oficial para la gestión e inscripción a torneos universitarios. Desarrollé un módulo administrativo basado en roles: un Administrador con control total (reglas, premios, auspiciantes) y un Tesorero encargado de auditar inscripciones y validar los comprobantes de pago para habilitar a los jugadores.</p>
+                        <div class="tags"><span>PHP</span><span>Laravel</span><span>Filament</span><span>Roles/Auth</span></div>
+                    </div>
+                    <a href="https://github.com/Mickel0822/GamerFest2025/commits/main/?author=Steevenbr" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Aporte</a>
+                </article>
+
+                <article class="proyecto colaboracion">
+                    <div class="proyecto-contenido">
+                        <h3>SIVET-MIL (Simulador Vehicular)</h3>
+                        <p>Desarrollo de un entorno virtual inmersivo para simular los componentes y el ciclo completo de operación de un vehículo (encendido, arranque y marcha) utilizando tecnologías de desarrollo de videojuegos.</p>
+                        <div class="tags"><span>Unity</span><span>Simulación 3D</span><span>C#</span></div>
+                    </div>
+                    <div class="enlace-repo" style="background-color: #334155; cursor: default; color: #94a3b8;">
+                        <i class="fa-solid fa-lock"></i> Repositorio Privado
+                    </div>
+                </article>
+
+                <article class="proyecto colaboracion">
+                    <div class="proyecto-contenido">
+                        <h3>CalidadSW (Testing de Modelos Relacionales)</h3>
+                        <p>Aplicación web estructurada bajo el patrón MVC en PHP nativo con Front Controller. Diseñada específicamente para testear el modelo Entidad-Relación (MySQL) mediante filtros de inventario automotriz (año, precio, marca).</p>
+                        <div class="tags"><span>PHP Nativo</span><span>MVC</span><span>MySQL</span><span>Testing</span></div>
+                    </div>
+                    <a href="https://github.com/ShadowAlejo/CalidadSW/commits/main/?author=Steevenbr" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Aporte</a>
+                </article>
+
             </div>
         </section>
 
