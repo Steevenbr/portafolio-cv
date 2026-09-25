@@ -1,22 +1,36 @@
+:root {
+    --bg-color: #0b1120;
+    --card-bg: #1e293b;
+    --primary: #38bdf8;
+    --primary-hover: #0284c7;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #0f172a; /* Fondo oscuro moderno */
-    color: #f1f5f9; /* Texto claro legible */
-    line-height: 1.6;
+    /* Fondo premium con un brillo sutil */
+    background: radial-gradient(circle at 10% 10%, #1e293b 0%, #0b1120 100%);
+    background-attachment: fixed;
+    color: var(--text-main);
+    line-height: 1.7;
 }
 
 header {
-    background-color: #1e293b;
-    padding: 1.5rem 5%;
+    background: rgba(11, 17, 32, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1.2rem 5%;
     position: sticky;
     top: 0;
-    border-bottom: 2px solid #3b82f6;
+    border-bottom: 1px solid var(--border-color);
     z-index: 100;
 }
 
@@ -24,11 +38,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-nav h1 {
+.logo {
+    color: var(--primary);
     font-size: 1.5rem;
-    color: #60a5fa;
+    font-weight: 800;
 }
 
 nav ul {
@@ -38,14 +55,14 @@ nav ul {
 }
 
 nav a {
-    color: #e2e8f0;
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #3b82f6;
+    color: var(--primary);
 }
 
 main {
@@ -54,128 +71,360 @@ main {
     margin: 0 auto;
 }
 
-section {
-    margin-bottom: 4rem;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #38bdf8;
-    border-bottom: 1px solid #334155;
+/* Tipografía de Secciones */
+.titulo-seccion {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+    position: relative;
     padding-bottom: 0.5rem;
 }
 
-#proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
 }
 
-.proyecto {
-    background-color: #1e293b;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #334155;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+.subtitulo-seccion {
+    margin-top: 4rem;
 }
 
-.proyecto:hover {
-    transform: translateY(-5px);
-    border-color: #3b82f6;
-}
-
-.proyecto h3 {
-    color: #f8fafc;
-    margin-bottom: 1rem;
-}
-
-.proyecto p {
-    color: #94a3b8;
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-}
-
-.proyecto strong {
-    color: #cbd5e1;
-}
-
-/* Estilos para la sección Hero (Sobre mí) */
+/* HERO / SOBRE MÍ */
 .hero {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    margin-bottom: 5rem;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
 }
 
 .foto-perfil {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #3b82f6;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    border: 4px solid var(--card-bg);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
 }
 
+.badge {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--primary);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.info-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.info-hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* BOTONES */
 .botones-contacto {
-    margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn {
-    padding: 0.75rem 1.5rem;
-    background-color: #3b82f6;
-    color: white;
+    padding: 0.8rem 1.8rem;
+    background-color: var(--primary);
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .btn:hover {
-    background-color: #2563eb;
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
 .btn-outline {
     background-color: transparent;
-    border: 2px solid #3b82f6;
-    color: #3b82f6;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
 }
 
 .btn-outline:hover {
-    background-color: #3b82f6;
-    color: white;
+    background-color: var(--card-bg);
+    border-color: var(--primary);
 }
 
-/* Estilos para habilidades */
+/* HABILIDADES */
 .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 6rem;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.skill-card i {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.skill-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* PROYECTOS */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.proyecto {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.proyecto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--primary);
+}
+
+.proyecto-contenido {
+    padding: 2rem;
+}
+
+.proyecto h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.proyecto p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-.skill {
-    background-color: #1e293b;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    border: 1px solid #3b82f6;
-    color: #60a5fa;
-    font-size: 0.9rem;
+.tags span {
+    font-size: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    color: var(--primary);
 }
 
-.enlace-github {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #38bdf8;
+.enlace-repo {
+    display: block;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--text-main);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.enlace-github:hover {
-    text-decoration: underline;
+.enlace-repo:hover {
+    background-color: var(--primary);
+    color: #fff;
 }
 
-.subtitulo-seccion {
-    margin-top: 3rem;
+.colaboracion {
+    border-left: 4px solid #a855f7;
+}
+
+/* CONTACTO */
+.contacto-contenedor {
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.lista-contacto {
+    list-style: none;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.lista-contacto li {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.lista-contacto i {
+    font-size: 2rem;
+    color: var(--primary);
+    background-color: rgba(56, 189, 248, 0.1);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.lista-contacto strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.lista-contacto a, .lista-contacto span {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.lista-contacto a:hover {
+    color: var(--primary);
+}
+
+/* RESPONSIVE DESING */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        display: none;
+    }
+    .botones-contacto {
+        justify-content: center;
+    }
+}
+
+/* METODOLOGÍA Y ARQUITECTURA */
+.descripcion-metodologia {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+.grid-metodologia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.tarjeta-metodologia {
+    background: linear-gradient(145deg, var(--card-bg), #111827);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta-metodologia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), #a855f7);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-metodologia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border-color: var(--primary);
+}
+
+.tarjeta-metodologia:hover::before {
+    transform: scaleX(1);
+}
+
+.icono-metodologia {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    background-color: rgba(56, 189, 248, 0.1);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.tarjeta-metodologia h3 {
+    color: var(--text-main);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-metodologia p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ANIMACIONES DE SCROLL Y EFECTOS */
+.seccion-oculta {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.seccion-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.foto-perfil:hover {
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }

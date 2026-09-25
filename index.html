@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steeven Bryan Flores Vega | Software Engineer</title>
+    <!-- Íconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
         <nav>
-            <h1>Steeven Flores</h1>
+            <h1 class="logo">&lt;Steeven.Dev /&gt;</h1>
             <ul>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <li><a href="#habilidades">Skills</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -21,79 +24,142 @@
     </header>
 
     <main>
-        <!-- SECCIÓN SOBRE MÍ CON FOTO Y BOTONES -->
+        <!-- SECCIÓN SOBRE MÍ -->
         <section id="sobre-mi" class="hero">
-            <img src="assets/perfil.jpg" alt="Steeven Flores" class="foto-perfil">
+            <div class="hero-imagen-container">
+                <img src="assets/perfil.jpg" alt="Steeven Flores" class="foto-perfil">
+            </div>
             <div class="info-hero">
-                <h2>Hola, soy Steeven Bryan Flores Vega</h2>
-                <p>Estudiante y futuro Ingeniero en Software por la Universidad de las Fuerzas Armadas ESPE. Me apasiona resolver problemas complejos mediante código estructurado, escalable y metodologías como Clean Architecture.</p>
+                <span class="badge">Ingeniero en Software</span>
+                <h2>Steeven Bryan Flores Vega</h2>
+                <p>Estudiante de la Universidad de las Fuerzas Armadas ESPE. Me especializo en el diseño de sistemas escalables utilizando metodologías como <strong>Clean Architecture</strong> y <strong>Domain-Driven Design (DDD)</strong>. Como siempre decimos, ¡somos los chicos de la ESPE! y me apasiona desde la optimización de flujos CI/CD y microservicios backend, hasta la creación de lógicas complejas de inteligencia artificial (FSM, Behavior Trees) para el desarrollo de videojuegos.</p>
                 <div class="botones-contacto">
-                    <a href="assets/cv.pdf" target="_blank" class="btn">Descargar CV</a>
-                    <a href="www.linkedin.com/in/steeven-bryan-flores-vega-037726403" target="_blank" class="btn btn-outline">LinkedIn</a>
-                    <a href="https://github.com/TU-USUARIO" target="_blank" class="btn btn-outline">GitHub</a>
+                    <a href="assets/Currículum_Steeven Flores.pdf" target="_blank" class="btn"><i class="fa-solid fa-file-pdf"></i> Descargar CV</a>
+                    <a href="https://www.linkedin.com/in/steeven-bryan-flores-vega-037726403/" target="_blank" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/Steevenbr" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN DE HABILIDADES TÉCNICAS -->
-        <section id="habilidades">
-            <h2>Herramientas y Tecnologías</h2>
-            <div class="skills-grid">
-                <span class="skill">Java & Spring Boot</span>
-                <span class="skill">Flutter & Dart</span>
-                <span class="skill">Firebase</span>
-                <span class="skill">C# & Unity</span>
-                <span class="skill">HTML, CSS, JS</span>
-                <span class="skill">SQL & Bases de Datos</span>
-                <span class="skill">Docker & WSL</span>
-                <span class="skill">GitHub Actions (CI/CD)</span>
-                <span class="skill">Clean Architecture & DDD</span>
-                <span class="skill">UML (draw.io, Lucidchart)</span>
+        <!-- SECCIÓN DE METODOLOGÍA Y ARQUITECTURA -->
+        <section id="metodologia">
+            <h2 class="titulo-seccion">Filosofía de Desarrollo y Arquitectura</h2>
+            <p class="descripcion-metodologia">Mi enfoque no es solo escribir código que funcione, sino diseñar sistemas mantenibles, escalables y testeables a largo plazo.</p>
+            
+            <div class="grid-metodologia">
+                <div class="tarjeta-metodologia">
+                    <div class="icono-metodologia"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Clean & Arquitectura Hexagonal</h3>
+                    <p>Estructuro mis aplicaciones separando estrictamente el núcleo del negocio de los detalles técnicos. Utilizo Arquitectura Hexagonal (Puertos y Adaptadores) y Clean Architecture junto con DDD para crear sistemas robustos, altamente testeables e independientes de frameworks, bases de datos o interfaces externas.</p>
+                </div>
+
+                <div class="tarjeta-metodologia">
+                    <div class="icono-metodologia"><i class="fa-solid fa-code-branch"></i></div>
+                    <h3>CI/CD & DevOps (Cultura Automation)</h3>
+                    <p>Integro pipelines de Integración y Despliegue Continuo (CI/CD) mediante GitHub Actions y automatizo entornos usando Docker y WSL. Me aseguro de que el paso desde el entorno de desarrollo hasta los servidores de producción sea rápido y sin fricciones.</p>
+                </div>
+
+                <div class="tarjeta-metodologia">
+                    <div class="icono-metodologia"><i class="fa-solid fa-cube"></i></div>
+                    <h3>Patrones de Diseño y SOLID</h3>
+                    <p>Aplico principios SOLID y patrones de diseño orientados a objetos (OOP). En mis proyectos (desde apps web hasta IA para videojuegos con Máquinas de Estado) priorizo la alta cohesión y el bajo acoplamiento para facilitar futuras actualizaciones.</p>
+                </div>
+
+                <div class="tarjeta-metodologia">
+                    <div class="icono-metodologia"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h3>Modelado y Documentación UML</h3>
+                    <p>Antes de escribir la primera línea de código, modelo la solución. Construyo diagramas de clases, flujos BPMN, diagramas de casos de uso y de componentes (draw.io, Lucidchart) para tener un mapa claro de la arquitectura y facilitar el trabajo en equipo.</p>
+                </div>
             </div>
         </section>
 
-        <!-- SECCIÓN DE PROYECTOS -->
+        <!-- SECCIÓN DE PROYECTOS DESTACADOS -->
         <section id="proyectos">
-            <h2>Proyectos Destacados</h2>
+            <h2 class="titulo-seccion">Proyectos Destacados</h2>
             <div class="grid-proyectos">
                 
                 <article class="proyecto">
-                    <h3>Módulo Turístico - GAD Pelileo</h3>
-                    <p>Desarrollo y despliegue en servidores municipales de una aplicación web orientada a la difusión de atractivos, rutas y emprendimientos rurales del cantón Pelileo.</p>
-                    <p><strong>Herramientas:</strong> Desarrollo Web, Gestión de Servidores, Documentación.</p>
-                    <a href="#" class="enlace-github">Ver Repositorio ➔</a>
+                    <div class="proyecto-contenido">
+                        <h3>Módulo Turístico - GAD Pelileo</h3>
+                        <p>Despliegue y configuración en servidores municipales de una plataforma web para la difusión turística, rutas y emprendimientos rurales.</p>
+                        <div class="tags"><span>Web</span><span>Servidores</span><span>Pelileo</span></div>
+                    </div>
+                    <!-- Recuerda actualizar estos enlaces con tus repositorios reales -->
+                    <a href="https://github.com/TU-USUARIO/nombre-del-repo-1" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
                 </article>
 
                 <article class="proyecto">
-                    <h3>SmartParking</h3>
-                    <p>Diseño de arquitectura del sistema, modelos de datos y aplicación móvil para la gestión de parqueaderos. Implementación basada en Clean Architecture.</p>
-                    <p><strong>Herramientas:</strong> Flutter, Firebase, UML.</p>
-                    <a href="#" class="enlace-github">Ver Repositorio ➔</a>
+                    <div class="proyecto-contenido">
+                        <h3>SmartParking</h3>
+                        <p>Aplicación móvil para la gestión de parqueaderos. Modelado detallado en UML y estructurado estrictamente bajo Clean Architecture.</p>
+                        <div class="tags"><span>Flutter</span><span>Firebase</span><span>UML</span></div>
+                    </div>
+                    <a href="https://github.com/TU-USUARIO/nombre-del-repo-2" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
                 </article>
 
                 <article class="proyecto">
-                    <h3>Microservicios y Pipeline CI/CD</h3>
-                    <p>Diseño de arquitectura orientada a dominios (DDD) y microservicios para sistemas como AnalytiCore. Implementación de flujos de despliegue mediante diagramas BPMN y contenedores.</p>
-                    <p><strong>Herramientas:</strong> Java Spring Boot, Docker, GitHub Actions.</p>
-                    <a href="#" class="enlace-github">Ver Repositorio ➔</a>
+                    <div class="proyecto-contenido">
+                        <h3>Arquitectura CI/CD & Microservicios</h3>
+                        <p>Implementación de diagramas BPMN (AnalytiCore), configuración de workers en Java y orquestación de contenedores.</p>
+                        <div class="tags"><span>Spring Boot</span><span>Docker</span><span>GitHub Actions</span></div>
+                    </div>
+                    <a href="https://github.com/TU-USUARIO/nombre-del-repo-3" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
                 </article>
 
                 <article class="proyecto">
-                    <h3>Survival Horror 2.5D (Elias Ward)</h3>
-                    <p>Diseño de mecánicas, animaciones por sprite sheets y arquitectura orientada a objetos (máquinas de estado finito, árboles de comportamiento) para un motor 2D.</p>
-                    <p><strong>Herramientas:</strong> Unity, C#, Pixel Art.</p>
-                    <a href="#" class="enlace-github">Ver Repositorio ➔</a>
+                    <div class="proyecto-contenido">
+                        <h3>Survival Horror 2.5D (Elias Ward)</h3>
+                        <p>Desarrollo de mecánicas, animaciones por sprite sheets y lógicas de IA orientada a objetos para un entorno 2D.</p>
+                        <div class="tags"><span>Unity</span><span>C#</span><span>Game AI</span></div>
+                    </div>
+                    <a href="https://github.com/TU-USUARIO/nombre-del-repo-4" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Código</a>
                 </article>
             </div>
 
-            <h2 class="subtitulo-seccion">Colaboraciones</h2>
+            <!-- SECCIÓN DE COLABORACIONES -->
+            <h2 class="titulo-seccion subtitulo-seccion">Colaboraciones Destacadas</h2>
             <div class="grid-proyectos">
-                <article class="proyecto">
-                    <h3>Módulo de Sistema de Compras</h3>
-                    <p>Trabajo colaborativo enfocado en el desarrollo de interfaces (frontend) y estructuración de la base de datos para flujos de registro y compras.</p>
-                    <p><strong>Rol:</strong> Desarrollador Frontend y Base de Datos.</p>
-                    <a href="#" class="enlace-github">Ver Repositorio ➔</a>
+                <article class="proyecto colaboracion">
+                    <div class="proyecto-contenido">
+                        <h3>Módulo de Sistema de Compras</h3>
+                        <p>Participación en el desarrollo frontend y estructuración de consultas de bases de datos (JOINs, actualizaciones) para flujos de registro y compras.</p>
+                        <div class="tags"><span>Frontend</span><span>SQL Database</span></div>
+                    </div>
+                    <a href="https://github.com/USUARIO-DEL-DUEÑO/nombre-del-repo-colaborativo" target="_blank" class="enlace-repo"><i class="fa-brands fa-github"></i> Ver Aporte</a>
                 </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CONTACTO -->
+        <section id="contacto">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <div class="contacto-contenedor">
+                <div class="contacto-info">
+                    
+                    <ul class="lista-contacto">
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Correo Electrónico</strong>
+                                <a href="mailto:steevenbr17@gmail.com">steevenbr17@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <strong>Teléfono / WhatsApp</strong>
+                                <span>+593 98 350 0808</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Ubicación</strong>
+                                <span>Latacunga</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
